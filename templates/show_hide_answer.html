@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Page Title</title>
+</head>
+<body>
+    <input type="text" id="textInput">
+    <button id="showHideButton" onclick="toggleAnswer()">Show Answer</button>
+
+    <script>
+        function toggleAnswer() {
+            var textInput = document.getElementById("textInput");
+            var button = document.getElementById("showHideButton");
+
+            if (textInput.disabled) {
+                textInput.disabled = false;
+                textInput.value = "";
+                button.textContent = "Show Answer";
+            } else {
+                textInput.disabled = true;
+                textInput.value = "ANSWER";
+                button.textContent = "Hide Answer";
+            }
+        }
+    </script>
+</body>
+</html>
